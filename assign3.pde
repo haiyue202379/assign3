@@ -28,7 +28,7 @@ void setup () {
   hpX = 40;
   gameState = GAME_START;
   enemyX = 0;
-  enemyY = floor(random(430));
+  enemyY = floor(random(270)+80);
   fighterX = 580;
   fighterY = 240;
   enemySpeedX = int(random(5))+3;
@@ -73,7 +73,7 @@ void draw() {
         image(treasureImg,treasureX,treasureY);
 
          if((int)enemyX%2080>=2070 && (int)enemyX%2080<=2080){
-                  enemyY = floor(random(430));
+                  enemyY = floor(random(270)+80);
                   enemyX+=enemySpeedX;
          }else if(enemyX%3120>=2080 && enemyX%3120<=3120){
              for(int i=0,x=0,y=0;i<5;i++,x+=80,y+=40){
